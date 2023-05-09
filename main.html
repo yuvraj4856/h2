@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>My Website</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    .img-profile {
+      width: 100px;
+      height: 100px;
+      float: left;
+      margin-right: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-3">
+    <div class="row align-items-center">
+      <div class="col-md-3">
+        <div class="text-center">
+          <img src="https://media.gettyimages.com/id/90968090/photo/icc-champions-photocall-india.jpg?s=1024x1024&w=gi&k=20&c=UBHS8ife8Cjf3sRr0FnchJCT2f5C5BAe-JQGoheYb9w=" alt="Profile Photo" class="img-profile rounded-circle">
+        </div>
+      </div>
+
+      <div class="col-md-9">
+        <div class="row">
+          <div class="col-sm-4">
+            <p class="mb-0">Name:</p>
+          </div>
+          <div class="col-sm-8">
+            <p class="mb-0">Yuvraj Singh</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4">
+            <p class="mb-0">Nationality:</p>
+          </div>
+          <div class="col-sm-8">
+            <p class="mb-0">India</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4">
+            <p class="mb-0">Age:</p>
+          </div>
+          <div class="col-sm-8">
+            <p class="mb-0">43</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="row">
+      <div class="col-md-12">
+        <div id="chart-container"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script>
+    var data = [
+    { year: 2019, runs: 500 },
+    { year: 2020, runs: 750 },
+    { year: 2021, runs: 1000 }
+  ];
+
+  // Define the options for your chart
+  var options = {
+    chart: {
+      type: 'column'
+    },
+    title: {
+      text: 'Runs Scored in a Year'
+    },
+    xAxis: {
+      categories: data.map(function(item) { return item.year; })
+    },
+    yAxis: {
+      title: {
+        text: 'Runs'
+      }
+    },
+    series: [{
+      name: 'Runs',
+      data: data.map(function(item) { return item.runs; })
+    }]
+  };
+
+  // Create the chart
+  var chart = Highcharts.chart('chart-container', options);
+
+    </script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist
